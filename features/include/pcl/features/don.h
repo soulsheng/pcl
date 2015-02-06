@@ -65,7 +65,7 @@ namespace pcl
    * \ingroup features
    */
   template <typename PointInT, typename PointNT, typename PointOutT>
-  class DifferenceOfNormalsEstimation : public Feature<PointInT, PointOutT>
+  class PCL_EXPORTS DifferenceOfNormalsEstimation : public Feature<PointInT, PointOutT>
   {
       using Feature<PointInT, PointOutT>::getClassName;
       using Feature<PointInT, PointOutT>::feature_name_;

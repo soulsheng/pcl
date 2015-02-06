@@ -292,7 +292,7 @@ namespace pcl
     * \ingroup segmentation
     */
   template <typename PointT>
-  class EuclideanClusterExtraction: public PCLBase<PointT>
+  class PCL_EXPORTS EuclideanClusterExtraction: public PCLBase<PointT>
   {
     typedef PCLBase<PointT> BasePCLBase;
 
