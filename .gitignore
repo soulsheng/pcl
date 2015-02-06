@@ -1,0 +1,11 @@
+CMakeFiles
+Debug
+*.dir
+bin
+lib
+*.pc
+*.cmake
+*.user
+apps
+/build/*.sdf
+/build/*.dot
