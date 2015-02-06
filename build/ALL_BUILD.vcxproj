@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{50B6231A-CAA2-4B8C-ABF3-906488B91E17}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/CMakeLists.txt;D:\file\code\remote\fork\pcl\CMakeLists.txt;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_verbosity.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_targets.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_options.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_sse.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\ProcessorCount.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\uninstall_target.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_boost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindEigen.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindFLANN.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\Findlibusb-1.0.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindOpenNI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindOpenNI2.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindFZAPI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindEnsenso.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindPXCAPI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindQhull.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfigQt.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets-release.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindPcap.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_gl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGLUT.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\pcl_config.h.in;D:\file\code\remote\fork\pcl\cmake\pcl_targets.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_pclconfig.cmake;D:\file\code\remote\fork\pcl\PCLConfig.cmake.in;D:\file\code\remote\fork\pcl\PCLConfigVersion.cmake.in;D:\file\code\remote\fork\pcl\cmake\pcl_all_in_one_installer.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_cpack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;D:\file\code\remote\fork\pcl\cmake\cpack_options.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\remote\fork\pcl\cmake\dep_graph.cmake;D:\file\code\remote\fork\pcl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/CMakeLists.txt;D:\file\code\remote\fork\pcl\CMakeLists.txt;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\remote\fork\pcl\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_verbosity.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_targets.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_options.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_sse.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\ProcessorCount.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\uninstall_target.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_boost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindEigen.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindFLANN.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\Findlibusb-1.0.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindOpenNI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindOpenNI2.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindFZAPI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindEnsenso.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindPXCAPI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindQhull.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKConfigQt.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8\VTKTargets-release.cmake;D:\file\code\remote\fork\pcl\cmake\Modules\FindPcap.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_find_gl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGLUT.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\pcl_config.h.in;D:\file\code\remote\fork\pcl\cmake\pcl_targets.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_utils.cmake;D:\file\code\remote\fork\pcl\cmake\CMakeParseArguments.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_pclconfig.cmake;D:\file\code\remote\fork\pcl\PCLConfig.cmake.in;D:\file\code\remote\fork\pcl\PCLConfigVersion.cmake.in;D:\file\code\remote\fork\pcl\cmake\pcl_all_in_one_installer.cmake;D:\file\code\remote\fork\pcl\cmake\pcl_cpack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;D:\file\code\remote\fork\pcl\cmake\cpack_options.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\remote\fork\pcl\cmake\dep_graph.cmake;D:\file\code\remote\fork\pcl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\c6c552cdecdf0cc6c1608437c1fe6aaa\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/c6c552cdecdf0cc6c1608437c1fe6aaa/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/c6c552cdecdf0cc6c1608437c1fe6aaa/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ZERO_CHECK.vcxproj">
+      <Project>AE594D77-2F23-43A4-8498-173B14EFADD7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/2d/pcl_2d.vcxproj">
+      <Project>49127E81-04AF-4EC7-A634-8C84F5B49F63</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_add_gaussian_noise.vcxproj">
+      <Project>9FCEE2C3-D4CF-43D1-B9A3-CACC14A75EEB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_boundary_estimation.vcxproj">
+      <Project>F56C6DDD-ECB7-44EE-9AD9-9E8AC7FE7E49</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_cluster_extraction.vcxproj">
+      <Project>F0619289-6D95-47E2-A642-78996306B606</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/common/pcl_common.vcxproj">
+      <Project>50522124-8293-4D74-97D6-994C16EF25B3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_compute_cloud_error.vcxproj">
+      <Project>123DF0E5-1E0F-4787-804A-CAC109C874D9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_compute_hausdorff.vcxproj">
+      <Project>9E7640BB-D254-485D-931E-1CEE998E1620</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_concatenate_points_pcd.vcxproj">
+      <Project>CD98183A-6BCC-4F02-A055-2CF51EC01614</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_convert_pcd_ascii_binary.vcxproj">
+      <Project>9734FAB7-FA65-439E-96CF-B443FD49EA0C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_crf_segmentation.vcxproj">
+      <Project>454BD827-7CD7-4425-998A-2ACBA9F6F8BC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_demean_cloud.vcxproj">
+      <Project>A1631D21-2516-40B6-8532-EFEA6BA77292</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_elch.vcxproj">
+      <Project>0B7C38B8-3716-4644-A03D-8F51B3904DBC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/common/pcl_example_check_if_point_is_valid.vcxproj">
+      <Project>E67A4D71-8FE0-44B3-A159-B842838B1A08</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/common/pcl_example_copy_point_cloud.vcxproj">
+      <Project>2D9BE8C0-E49A-4E64-88D6-F8427D3A35A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_difference_of_normals.vcxproj">
+      <Project>45A4FD45-081D-42D4-AF4C-E7F66227D165</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/segmentation/pcl_example_extract_clusters_normals.vcxproj">
+      <Project>DE632AE1-E2AC-420F-8C5B-4CAAC815D669</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/filters/pcl_example_extract_indices.vcxproj">
+      <Project>6F79A656-1A43-47BC-8660-22EE5DBDB2E5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_fast_point_feature_histograms.vcxproj">
+      <Project>4E4C8DAC-E41E-4189-A939-ED3DBC238622</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/keypoints/pcl_example_get_keypoints_indices.vcxproj">
+      <Project>9EEB344E-03FC-43CE-836A-5012F5E5448F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/common/pcl_example_get_max_min_coordinates.vcxproj">
+      <Project>90562454-FA0C-4CCB-9402-BBC43AF5AEB0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/geometry/pcl_example_half_edge_mesh.vcxproj">
+      <Project>B591F422-C00C-4FD4-A5E4-45DEDB0C0099</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/segmentation/pcl_example_lccp_segmentation.vcxproj">
+      <Project>9F0A688B-D6D1-498A-B48B-AA2346BB33E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_normal_estimation.vcxproj">
+      <Project>F732A8B9-4093-4FDB-983F-0F0A142FE1F4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/common/pcl_example_organized_point_cloud.vcxproj">
+      <Project>A7519F9C-B740-4525-97AE-4E3D653327C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/outofcore/pcl_example_outofcore.vcxproj">
+      <Project>B1EFA660-1659-47A9-8525-7F2FA6F33571</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/outofcore/pcl_example_outofcore_with_lod.vcxproj">
+      <Project>358517FC-2BD2-4E17-BDA6-DE977926B0F0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_point_feature_histograms.vcxproj">
+      <Project>29558386-62D0-4F4F-8E0D-D8C81E73F46C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_principal_curvatures_estimation.vcxproj">
+      <Project>C4FB6DDE-E885-41E2-BA42-A16386822E30</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/segmentation/pcl_example_region_growing.vcxproj">
+      <Project>B98885E3-B38B-40A1-9A30-D06EE7FF0C47</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/filters/pcl_example_remove_nan_from_point_cloud.vcxproj">
+      <Project>EDC2DEFE-1868-4476-9582-E7A117860D65</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_rift_estimation.vcxproj">
+      <Project>6C5162ED-BADA-49F6-959E-192E9566AC12</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/common/pcl_example_scope_time.vcxproj">
+      <Project>C106AE06-0174-434D-8853-B9F6FEA4BF38</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_shape_contexts.vcxproj">
+      <Project>A96DF4EF-1FE8-4391-B071-6B51490465EC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/keypoints/pcl_example_sift_keypoint_estimation.vcxproj">
+      <Project>B0BA9809-C1FA-4D64-B298-22525C831A3C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/keypoints/pcl_example_sift_normal_keypoint_estimation.vcxproj">
+      <Project>378C0647-C95F-4517-AF12-0EAAA1F8AFEB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/keypoints/pcl_example_sift_z_keypoint_estimation.vcxproj">
+      <Project>24811C07-ABED-466D-AD5A-7DFC59E9BF03</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/features/pcl_example_spin_images.vcxproj">
+      <Project>D68FF7A9-58C6-42B1-A9D5-2638B940F634</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/stereo/pcl_example_stereo_baseline.vcxproj">
+      <Project>324D83C6-D18B-43BA-AB42-4D992B36DD3D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/examples/segmentation/pcl_example_supervoxels.vcxproj">
+      <Project>D4C75305-6E99-4763-807C-E789FF48CCC8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_extract_feature.vcxproj">
+      <Project>1F225B6D-1AE9-4557-B2A5-A2F36D2AA08F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_fast_bilateral_filter.vcxproj">
+      <Project>1801B702-8E46-4D30-AE63-B88E5B3D4297</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/features/pcl_features.vcxproj">
+      <Project>896658D7-38DE-4494-B441-84F67231C4CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/filters/pcl_filters.vcxproj">
+      <Project>CABD72C5-2A4D-4FD4-BC48-7EFEF1F210EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_fpfh_estimation.vcxproj">
+      <Project>66888597-878C-40E3-9295-AD369D063F81</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_generate.vcxproj">
+      <Project>04A66FBF-DAE5-41C1-800C-4B4B3E17B348</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_gp3_surface.vcxproj">
+      <Project>A506ABDA-DC70-4EB3-9C27-8A211B1043A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_grid_min.vcxproj">
+      <Project>D6172ECD-27B0-4D0A-806D-6F823EC9B528</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/people/pcl_ground_based_rgbd_people_detector.vcxproj">
+      <Project>01EF0441-0101-456B-9CE9-B54040CC8734</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_hdl_grabber.vcxproj">
+      <Project>FB83A3A2-ADE6-4FBD-8475-668F35358257</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_hdl_viewer_simple.vcxproj">
+      <Project>B8A2D2B5-06FD-41B6-A885-92CC9E05EDA1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_icp.vcxproj">
+      <Project>79185417-6F35-4555-87C6-949F8E36132A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_icp2d.vcxproj">
+      <Project>8B4B8960-FBCE-4608-8DDF-3F7323D936C4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_image_grabber_saver.vcxproj">
+      <Project>F033DDF1-7847-42D6-B9C5-2DFAEE534EF2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_image_grabber_viewer.vcxproj">
+      <Project>7C9B392F-02E4-402A-ADE0-F55CD956DFF2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/pcl_io.vcxproj">
+      <Project>F15E6729-6148-4C11-AA23-54C15FE3AD46</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/pcl_io_ply.vcxproj">
+      <Project>8366744A-4B8B-4C1C-AAF4-502794126560</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/kdtree/pcl_kdtree.vcxproj">
+      <Project>1EC8BF53-C9D7-46A3-9350-6D3DC14B8178</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/keypoints/pcl_keypoints.vcxproj">
+      <Project>C6F1FCE9-3B10-4B32-B681-A1BD1BB32BFC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_linemod_detection.vcxproj">
+      <Project>5682BB4F-E055-4787-81A0-7D8DD3DAA866</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_local_max.vcxproj">
+      <Project>335988C0-4A80-4850-93D9-B84039D3D9FA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_lum.vcxproj">
+      <Project>BEEDB651-15DD-42FE-A978-FEAB7E43CC92</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_marching_cubes_reconstruction.vcxproj">
+      <Project>FB71AE09-B30A-427F-8504-47AF1465CEA7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_match_linemod_template.vcxproj">
+      <Project>8109E813-2DFE-4FD0-82F8-59E21635FEC1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_mesh2pcd.vcxproj">
+      <Project>AB936D6B-6E25-454F-9962-872D2B442AE6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_mesh_sampling.vcxproj">
+      <Project>200209A1-1B0E-4846-8815-185DC1703F41</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ml/pcl_ml.vcxproj">
+      <Project>3A196866-FC54-4921-BC97-21EA87A391BD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_mls_smoothing.vcxproj">
+      <Project>ACB47CBD-5D8C-4B12-AAA4-60B079589C4B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_morph.vcxproj">
+      <Project>CAD9E209-4232-462D-840A-10440F8E79CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_ndt2d.vcxproj">
+      <Project>143E76DF-9F2C-41A0-8936-FD051A418660</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_ndt3d.vcxproj">
+      <Project>A0751C62-98FC-4E09-AB55-AA90F6BCAC00</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_normal_estimation.vcxproj">
+      <Project>E45DD20E-326E-4BCF-825A-6666C2B40C7F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj2pcd.vcxproj">
+      <Project>C34D6D89-3439-4F91-94FA-A67984CDD58E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj2vtk.vcxproj">
+      <Project>D5ADDD5D-7637-4655-AEF5-D9D9A35F2795</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_accepted_hypotheses.vcxproj">
+      <Project>D2C6FA1C-F18A-4B35-809A-3F0C8B7FE36F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_hash_table.vcxproj">
+      <Project>AEB1BD21-3462-4C5B-ABC6-49DE286A50FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_model_opps.vcxproj">
+      <Project>F2D00D48-A8D3-455D-9C53-D74D0FD16F96</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_orr_octree.vcxproj">
+      <Project>B31DE6B3-C22E-4FFD-A71B-5CB23FD53AB1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_orr_octree_zprojection.vcxproj">
+      <Project>B32A9435-130A-4740-809C-7538F647BCA6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_result.vcxproj">
+      <Project>0653F5C0-D792-4579-BEAB-9A4F584D9AB3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_obj_rec_ransac_scene_opps.vcxproj">
+      <Project>D6E74D4B-BEE8-4CE0-BFFE-3B08374FA567</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/octree/pcl_octree.vcxproj">
+      <Project>6EE8D147-B10E-4AC5-8460-C95A5B85FA26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_octree_viewer.vcxproj">
+      <Project>C7340053-E026-4164-88E1-2F5B37DC003D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_oni2pcd.vcxproj">
+      <Project>0B76645D-E001-48C0-B775-A75679FA79FB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_oni_viewer.vcxproj">
+      <Project>6E6E3FFA-1722-4A21-91FD-341FA998C598</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_openni_grabber_depth_example.vcxproj">
+      <Project>F337B15C-FC77-4964-BE89-CD4D9E1A6D3B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_openni_grabber_example.vcxproj">
+      <Project>0763F3DF-B49A-4F4B-B9C6-CE630C754CE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_openni_image.vcxproj">
+      <Project>D1E3E358-8B89-40D8-B4F9-03EC5BC3A3D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_openni_pcd_recorder.vcxproj">
+      <Project>F0B6C0E5-4838-4F6A-8C8A-276FB8038650</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_openni_save_image.vcxproj">
+      <Project>D43C7459-C54F-43C1-87F1-25643A48CB4D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_openni_viewer.vcxproj">
+      <Project>488E6755-BB05-48E1-98B1-D25B2E3BB542</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_organized_pcd_to_png.vcxproj">
+      <Project>6133C2C9-FB30-4754-A99F-BD7163592175</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_outlier_removal.vcxproj">
+      <Project>FBB1607C-D797-4F12-A728-356769A27AD9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/outofcore/pcl_outofcore.vcxproj">
+      <Project>16A34491-4259-4310-AF48-AC28E37EF50A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/outofcore/tools/pcl_outofcore_print.vcxproj">
+      <Project>9039E6CF-A9B3-4E10-9776-EEE1C333DEB2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/outofcore/tools/pcl_outofcore_process.vcxproj">
+      <Project>F84A45B7-022C-4439-85C9-CDABBCC5A8C6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_passthrough_filter.vcxproj">
+      <Project>A39D70F8-2100-4F52-9D23-FD596C77A021</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_pcd2ply.vcxproj">
+      <Project>314F8DEF-6BDF-465B-9339-59BEB3362822</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_pcd2png.vcxproj">
+      <Project>3A970325-EBD1-4462-9DB6-1C300754679F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_pcd2vtk.vcxproj">
+      <Project>7F48BC25-D905-4717-9FCA-E0D8518C6BAE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_pcd_change_viewpoint.vcxproj">
+      <Project>8DA459E8-6878-46A9-AB71-DC04773E15D9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_pcd_convert_NaN_nan.vcxproj">
+      <Project>DB8ED3AE-B2AC-4F3A-AB04-1BC6BDE2AF40</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_pcd_grabber_viewer.vcxproj">
+      <Project>F14C1D69-17FD-4548-B379-C7487DA2E4DB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_pcd_image_viewer.vcxproj">
+      <Project>1EE0A9B9-33CA-47B2-B202-EAD00B2A42EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/pcl_pcd_introduce_nan.vcxproj">
+      <Project>778F72F5-20A3-4D6A-B947-009C159435EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_pclzf2pcd.vcxproj">
+      <Project>70B96129-E7CD-4109-8E29-C2D35FDB1D20</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/people/pcl_people.vcxproj">
+      <Project>54B1DBEE-93DE-45FF-B189-E112E7552559</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_plane_projection.vcxproj">
+      <Project>ABD7EE1B-540D-47E5-8070-6F402F0A2863</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/ply/pcl_ply2obj.vcxproj">
+      <Project>9399D7AC-FB54-4ACE-91FC-69F4316FEADE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_ply2pcd.vcxproj">
+      <Project>3D5A4B1A-D15E-43DC-9CCA-CC8548DA1EFB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/ply/pcl_ply2ply.vcxproj">
+      <Project>95BE90E0-EA71-4EA1-88E7-90930DC0F1B1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/ply/pcl_ply2raw.vcxproj">
+      <Project>4DDDB0F4-1500-46EA-9E6B-35B007D392A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_ply2vtk.vcxproj">
+      <Project>7A14563C-25DA-43AC-B429-6F325505210B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/io/tools/ply/pcl_plyheader.vcxproj">
+      <Project>E5E5800C-D254-4EF1-8102-6F31F6341593</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_png2pcd.vcxproj">
+      <Project>C67EA772-73F0-4A65-BC17-D61D3B3CF940</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_poisson_reconstruction.vcxproj">
+      <Project>C833B047-B012-4A56-A15F-E2B2D5B90B37</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_progressive_morphological_filter.vcxproj">
+      <Project>2F81782D-2DE2-448D-8927-A7D55C18FCFE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_radius_filter.vcxproj">
+      <Project>76EC1D65-D599-4641-A1CB-222D8468E012</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/recognition/pcl_recognition.vcxproj">
+      <Project>C66B4D4D-1681-493F-B690-BCA2418EA967</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/registration/pcl_registration.vcxproj">
+      <Project>DC2930E0-A211-4942-A4B9-A251F1FBC2C6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_registration_visualizer.vcxproj">
+      <Project>EB3BE56D-AAC0-4656-8C88-BF485EDBE39D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_sac_segmentation_plane.vcxproj">
+      <Project>A2A949EE-9E3D-4F90-8841-B4FF2BCEADC9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/sample_consensus/pcl_sample_consensus.vcxproj">
+      <Project>EDCA6DD7-3EA0-498C-B5C4-FA11351FDA5B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/search/pcl_search.vcxproj">
+      <Project>8507D2F1-7E1A-451C-BF2D-BE230325E8A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/segmentation/pcl_segmentation.vcxproj">
+      <Project>4672F99C-DBFA-472A-89CB-C4E8B76301B4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_spin_estimation.vcxproj">
+      <Project>8B6AF64F-5A2B-4EEC-81BA-EAE57B9B2508</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/stereo/pcl_stereo.vcxproj">
+      <Project>6EC459B1-9C51-4DEC-A34A-2417DC2E1B0C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/surface/pcl_surface.vcxproj">
+      <Project>3D111999-9A8A-4DE4-98B3-2796AB48383F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_tiff2pcd.vcxproj">
+      <Project>FD16C26E-F2AB-4C8F-8C15-AB74F1E4A61B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_timed_trigger_test.vcxproj">
+      <Project>F76ADC51-391E-4437-8747-B438D75F2D82</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tracking/pcl_tracking.vcxproj">
+      <Project>3ED4DBFA-17FB-47F8-BDFE-897CFC097BA5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_train_linemod_template.vcxproj">
+      <Project>FABD4177-C0B1-48C9-A62D-4F0CAB49BED4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_train_unary_classifier.vcxproj">
+      <Project>1E6CDCA1-FE62-42D6-8263-C965CBF7A547</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_transform_from_viewpoint.vcxproj">
+      <Project>8E1C6CF4-4289-4070-8506-1B941E20E656</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_transform_point_cloud.vcxproj">
+      <Project>E76949B5-044B-44C2-B2C6-492D9FF8F6EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_unary_classifier_segment.vcxproj">
+      <Project>BAD59ABE-BBEF-4F17-A6B9-866EDBFC5872</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_uniform_sampling.vcxproj">
+      <Project>2505C6F6-EEE2-4B15-828F-9CA7F8738AAE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_vfh_estimation.vcxproj">
+      <Project>2B944400-59D2-43FC-B5DB-8870A4920393</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/tools/pcl_viewer.vcxproj">
+      <Project>7A31934F-E8C0-47BA-9483-524C57961053</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_virtual_scanner.vcxproj">
+      <Project>6273889E-C211-4A5A-A81A-C655228FB585</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/visualization/pcl_visualization.vcxproj">
+      <Project>ECC9AD31-FE50-4965-9B2C-B3F0C3125C57</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_voxel_grid.vcxproj">
+      <Project>13FB4863-AA41-4381-B984-986C634DC6ED</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_voxel_grid_occlusion_estimation.vcxproj">
+      <Project>D9C5E52F-0D2B-4CF3-A679-DBD9C2487C35</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_vtk2obj.vcxproj">
+      <Project>CC4C1AF6-1A7B-446A-9BF0-52003F5FD2AF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_vtk2pcd.vcxproj">
+      <Project>3054AD37-E80B-48FE-B0DE-9CF6BE7C1124</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_vtk2ply.vcxproj">
+      <Project>2DDBC9D2-AAB7-4068-9CBD-B52DE4739645</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/tools/pcl_xyz2pcd.vcxproj">
+      <Project>35A40864-EAD4-49B1-ADAA-3E1346FDAE3D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

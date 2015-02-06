@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{50522124-8293-4D74-97D6-994C16EF25B3}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>pcl_common</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_common.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_common_debug</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_common.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_common_release</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>VCOMP100D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_common_debug.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_common_debug.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>VCOMP100.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_common_release.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_common_release.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\common\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\common\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/common/CMakeLists.txt;D:\file\code\remote\fork\pcl\common\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\common\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\common\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/common/CMakeLists.txt;D:\file\code\remote\fork\pcl\common\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\common\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\include\pcl\correspondence.h" />
+    <ClInclude Include="..\..\common\include\pcl\exceptions.h" />
+    <ClInclude Include="..\..\common\include\pcl\pcl_base.h" />
+    <ClInclude Include="..\..\common\include\pcl\pcl_exports.h" />
+    <ClInclude Include="..\..\common\include\pcl\pcl_macros.h" />
+    <ClInclude Include="..\..\common\include\pcl\point_cloud.h" />
+    <ClInclude Include="..\..\common\include\pcl\point_traits.h" />
+    <ClInclude Include="..\..\common\include\pcl\point_types_conversion.h" />
+    <ClInclude Include="..\..\common\include\pcl\point_representation.h" />
+    <ClInclude Include="..\..\common\include\pcl\point_types.h" />
+    <ClInclude Include="..\..\common\include\pcl\for_each_type.h" />
+    <ClInclude Include="..\..\common\include\pcl\pcl_tests.h" />
+    <ClInclude Include="..\..\common\include\pcl\cloud_iterator.h" />
+    <ClInclude Include="..\..\common\include\pcl\TextureMesh.h" />
+    <ClInclude Include="..\..\common\include\pcl\sse.h" />
+    <ClInclude Include="..\..\common\include\pcl\PCLPointField.h" />
+    <ClInclude Include="..\..\common\include\pcl\PCLPointCloud2.h" />
+    <ClInclude Include="..\..\common\include\pcl\PCLImage.h" />
+    <ClInclude Include="..\..\common\include\pcl\PCLHeader.h" />
+    <ClInclude Include="..\..\common\include\pcl\ModelCoefficients.h" />
+    <ClInclude Include="..\..\common\include\pcl\PolygonMesh.h" />
+    <ClInclude Include="..\..\common\include\pcl\Vertices.h" />
+    <ClInclude Include="..\..\common\include\pcl\PointIndices.h" />
+    <ClInclude Include="..\..\common\include\pcl\register_point_struct.h" />
+    <ClInclude Include="..\..\common\include\pcl\conversions.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\boost.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\angles.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\bivariate_polynomial.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\centroid.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\concatenate.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\common.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\common_headers.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\distances.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\eigen.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\copy_point.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\io.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\file_io.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\intersections.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\norms.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\piecewise_linear_function.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\polynomial_calculations.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\poses_from_matches.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\time.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\time_trigger.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\transforms.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\transformation_from_correspondences.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\vector_average.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\pca.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\point_tests.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\synchronizer.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\utils.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\geometry.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\gaussian.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\point_operators.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\spring.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\intensity.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\random.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\generate.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\projection_matrix.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\colors.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\feature_histogram.h" />
+    <ClInclude Include="..\..\common\include\pcl\impl\pcl_base.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\impl\instantiate.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\impl\point_types.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\impl\cloud_iterator.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\ros\conversions.h" />
+    <ClInclude Include="..\..\common\include\pcl\ros\register_point_struct.h" />
+    <ClInclude Include="..\..\common\include\pcl\console\parse.h" />
+    <ClInclude Include="..\..\common\include\pcl\console\print.h" />
+    <ClInclude Include="..\..\common\include\pcl\console\time.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\fft\_kiss_fft_guts.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\fft\kiss_fft.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\fft\kiss_fftr.h" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\angles.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\bivariate_polynomial.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\centroid.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\common.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\eigen.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\intersections.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\copy_point.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\io.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\file_io.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\norms.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\piecewise_linear_function.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\polynomial_calculations.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\pca.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\transforms.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\transformation_from_correspondences.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\vector_average.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\gaussian.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\spring.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\intensity.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\random.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\generate.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\projection_matrix.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\common\impl\accumulators.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\bearing_angle_image.h" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\range_image.h" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\range_image_planar.h" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\range_image_spherical.h" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\impl\range_image.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\impl\range_image_planar.hpp" />
+    <ClInclude Include="..\..\common\include\pcl\range_image\impl\range_image_spherical.hpp" />
+    <ClCompile Include="..\..\common\src\point_types.cpp"  />
+    <ClCompile Include="..\..\common\src\pcl_base.cpp"  />
+    <ClCompile Include="..\..\common\src\io.cpp"  />
+    <ClCompile Include="..\..\common\src\common.cpp"  />
+    <ClCompile Include="..\..\common\src\correspondence.cpp"  />
+    <ClCompile Include="..\..\common\src\distances.cpp"  />
+    <ClCompile Include="..\..\common\src\parse.cpp"  />
+    <ClCompile Include="..\..\common\src\poses_from_matches.cpp"  />
+    <ClCompile Include="..\..\common\src\print.cpp"  />
+    <ClCompile Include="..\..\common\src\projection_matrix.cpp"  />
+    <ClCompile Include="..\..\common\src\time_trigger.cpp"  />
+    <ClCompile Include="..\..\common\src\gaussian.cpp"  />
+    <ClCompile Include="..\..\common\src\colors.cpp"  />
+    <ClCompile Include="..\..\common\src\feature_histogram.cpp"  />
+    <ClCompile Include="..\..\common\src\bearing_angle_image.cpp"  />
+    <ClCompile Include="..\..\common\src\range_image.cpp"  />
+    <ClCompile Include="..\..\common\src\range_image_planar.cpp"  />
+    <ClCompile Include="..\..\common\src\fft\kiss_fft.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\common\src\fft\kiss_fftr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ZERO_CHECK.vcxproj">
+      <Project>AE594D77-2F23-43A4-8498-173B14EFADD7</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

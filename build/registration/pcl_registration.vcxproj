@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{DC2930E0-A211-4942-A4B9-A251F1FBC2C6}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>pcl_registration</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_registration.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_registration_debug</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_registration.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_registration_release</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib;..\lib\pcl_kdtree_debug.lib;..\lib\pcl_search_debug.lib;..\lib\pcl_sample_consensus_debug.lib;..\lib\pcl_features_debug.lib;..\lib\pcl_filters_debug.lib;..\lib\pcl_search_debug.lib;..\lib\pcl_kdtree_debug.lib;..\lib\pcl_sample_consensus_debug.lib;..\lib\pcl_common_debug.lib;..\lib\pcl_octree_debug.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>VCOMP100D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_registration_debug.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_registration_debug.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\registration\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib;..\lib\pcl_kdtree_release.lib;..\lib\pcl_search_release.lib;..\lib\pcl_sample_consensus_release.lib;..\lib\pcl_features_release.lib;..\lib\pcl_filters_release.lib;..\lib\pcl_search_release.lib;..\lib\pcl_kdtree_release.lib;..\lib\pcl_sample_consensus_release.lib;..\lib\pcl_common_release.lib;..\lib\pcl_octree_release.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>VCOMP100.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_registration_release.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_registration_release.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\registration\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/registration/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\registration\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/registration/CMakeLists.txt;D:\file\code\remote\fork\pcl\registration\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\registration\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\registration\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/registration/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\registration\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/registration/CMakeLists.txt;D:\file\code\remote\fork\pcl\registration\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\registration\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\registration\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\registration\include\pcl\registration\eigen.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\boost.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\boost_graph.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\convergence_criteria.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\default_convergence_criteria.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_estimation.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_estimation_normal_shooting.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_estimation_backprojection.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_estimation_organized_projection.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_distance.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_median_distance.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_surface_normal.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_features.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_one_to_one.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_poly.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_sample_consensus.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_sample_consensus_2d.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_trimmed.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_var_trimmed.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_rejection_organized_boundary.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_sorting.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\correspondence_types.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\ia_ransac.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\icp.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\joint_icp.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\icp_nl.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\lum.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\elch.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\ndt.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\ndt_2d.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\ppf_registration.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\pairwise_graph_registration.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\pyramid_feature_matching.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\registration.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transforms.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_2D.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_svd.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_svd_scale.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_dual_quaternion.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_lm.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_point_to_plane.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_point_to_plane_weighted.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_point_to_plane_lls.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_estimation_point_to_plane_lls_weighted.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_validation.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\transformation_validation_euclidean.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\gicp.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\gicp6d.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\bfgs.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\warp_point_rigid.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\warp_point_rigid_6d.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\warp_point_rigid_3d.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\distances.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\exceptions.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\sample_consensus_prerejective.h" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\default_convergence_criteria.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_estimation.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_estimation_normal_shooting.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_estimation_backprojection.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_estimation_organized_projection.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_distance.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_median_distance.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_surface_normal.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_features.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_one_to_one.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_poly.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_sample_consensus.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_sample_consensus_2d.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_trimmed.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_var_trimmed.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_rejection_organized_boundary.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\correspondence_types.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\ia_ransac.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\icp.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\joint_icp.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\icp_nl.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\elch.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\lum.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\ndt.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\ndt_2d.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\ppf_registration.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\pyramid_feature_matching.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\registration.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_2D.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_svd.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_svd_scale.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_dual_quaternion.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_lm.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_point_to_plane_lls.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_point_to_plane_lls_weighted.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_estimation_point_to_plane_weighted.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\transformation_validation_euclidean.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\gicp.hpp" />
+    <ClInclude Include="..\..\registration\include\pcl\registration\impl\sample_consensus_prerejective.hpp" />
+    <ClCompile Include="..\..\registration\src\registration.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_estimation.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_estimation_normal_shooting.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_estimation_backprojection.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_estimation_organized_projection.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_distance.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_median_distance.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_surface_normal.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_features.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_one_to_one.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_poly.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_types.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_sample_consensus.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_sample_consensus_2d.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_trimmed.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_var_trimmed.cpp"  />
+    <ClCompile Include="..\..\registration\src\correspondence_rejection_organized_boundary.cpp"  />
+    <ClCompile Include="..\..\registration\src\ppf_registration.cpp"  />
+    <ClCompile Include="..\..\registration\src\pyramid_feature_matching.cpp"  />
+    <ClCompile Include="..\..\registration\src\ia_ransac.cpp"  />
+    <ClCompile Include="..\..\registration\src\icp.cpp"  />
+    <ClCompile Include="..\..\registration\src\joint_icp.cpp"  />
+    <ClCompile Include="..\..\registration\src\gicp.cpp"  />
+    <ClCompile Include="..\..\registration\src\gicp6d.cpp"  />
+    <ClCompile Include="..\..\registration\src\icp_nl.cpp"  />
+    <ClCompile Include="..\..\registration\src\elch.cpp"  />
+    <ClCompile Include="..\..\registration\src\lum.cpp"  />
+    <ClCompile Include="..\..\registration\src\ndt.cpp"  />
+    <ClCompile Include="..\..\registration\src\ndt_2d.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_2D.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_svd.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_svd_scale.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_dual_quaternion.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_lm.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_point_to_plane_weighted.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_point_to_plane_lls.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_estimation_point_to_plane_lls_weighted.cpp"  />
+    <ClCompile Include="..\..\registration\src\transformation_validation_euclidean.cpp"  />
+    <ClCompile Include="..\..\registration\src\sample_consensus_prerejective.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ZERO_CHECK.vcxproj">
+      <Project>AE594D77-2F23-43A4-8498-173B14EFADD7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/common/pcl_common.vcxproj">
+      <Project>50522124-8293-4D74-97D6-994C16EF25B3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/features/pcl_features.vcxproj">
+      <Project>896658D7-38DE-4494-B441-84F67231C4CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/filters/pcl_filters.vcxproj">
+      <Project>CABD72C5-2A4D-4FD4-BC48-7EFEF1F210EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/kdtree/pcl_kdtree.vcxproj">
+      <Project>1EC8BF53-C9D7-46A3-9350-6D3DC14B8178</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/octree/pcl_octree.vcxproj">
+      <Project>6EE8D147-B10E-4AC5-8460-C95A5B85FA26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/sample_consensus/pcl_sample_consensus.vcxproj">
+      <Project>EDCA6DD7-3EA0-498C-B5C4-FA11351FDA5B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/search/pcl_search.vcxproj">
+      <Project>8507D2F1-7E1A-451C-BF2D-BE230325E8A9</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
