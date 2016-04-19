@@ -9,3 +9,5 @@ lib
 apps
 /build/*.sdf
 /build/*.dot
+/build/*.opensdf
+/build/ipch
