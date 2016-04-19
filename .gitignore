@@ -11,3 +11,4 @@ apps
 /build/*.dot
 /build/*.opensdf
 /build/ipch
+/build/tools/testOut.pcd
