@@ -12,3 +12,4 @@ apps
 /build/*.opensdf
 /build/ipch
 /build/tools/testOut.pcd
+/build/*.suo
