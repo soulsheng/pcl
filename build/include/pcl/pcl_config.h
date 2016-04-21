@@ -14,7 +14,7 @@
 
 /* #undef HAVE_TBB */
 
-#define HAVE_OPENNI 1
+/* #undef HAVE_OPENNI */
 
 /* #undef HAVE_OPENNI2 */
 

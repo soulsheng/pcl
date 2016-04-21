@@ -20,11 +20,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="..\..\io\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{A304014F-7C0B-4A22-96BA-7632CA4BE487}</UniqueIdentifier>
+      <UniqueIdentifier>{68BDF161-1AFB-4F13-A5AC-24B1FDFCE85F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{C4D524B9-41B1-4BF7-ACA1-73CB0D028425}</UniqueIdentifier>
+      <UniqueIdentifier>{829E85C2-5B6D-4742-AED8-E6A79A88E7A3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

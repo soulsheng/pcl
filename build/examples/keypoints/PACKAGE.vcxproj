@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{5F125A06-34D1-4FBA-A6CD-F9FA955FEEC2}</ProjectGUID>
+    <ProjectGUID>{4EE2F027-754E-43C4-9219-886B5724303C}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>PACKAGE</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\io\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\keypoints\include;D:\file\code\remote\fork\pcl\segmentation\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\outofcore\include;D:\file\code\remote\fork\pcl\stereo\include;D:\file\code\remote\fork\pcl\geometry\include;D:\file\code\remote\fork\pcl\visualization\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/io/include;F:/liuss/code/git/3d/pcl-portable/features/include;F:/liuss/code/git/3d/pcl-portable/search/include;F:/liuss/code/git/3d/pcl-portable/kdtree/include;F:/liuss/code/git/3d/pcl-portable/octree/include;F:/liuss/code/git/3d/pcl-portable/filters/include;F:/liuss/code/git/3d/pcl-portable/keypoints/include;F:/liuss/code/git/3d/pcl-portable/segmentation/include;F:/liuss/code/git/3d/pcl-portable/sample_consensus/include;F:/liuss/code/git/3d/pcl-portable/outofcore/include;F:/liuss/code/git/3d/pcl-portable/stereo/include;F:/liuss/code/git/3d/pcl-portable/geometry/include;F:/liuss/code/git/3d/pcl-portable/visualization/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/include/vtk-5.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -50,9 +50,9 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd D:\file\code\remote\fork\pcl\build
+cd F:\liuss\code\git\3d\pcl-portable\build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+F:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -66,7 +66,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\io\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\keypoints\include;D:\file\code\remote\fork\pcl\segmentation\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\outofcore\include;D:\file\code\remote\fork\pcl\stereo\include;D:\file\code\remote\fork\pcl\geometry\include;D:\file\code\remote\fork\pcl\visualization\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/io/include;F:/liuss/code/git/3d/pcl-portable/features/include;F:/liuss/code/git/3d/pcl-portable/search/include;F:/liuss/code/git/3d/pcl-portable/kdtree/include;F:/liuss/code/git/3d/pcl-portable/octree/include;F:/liuss/code/git/3d/pcl-portable/filters/include;F:/liuss/code/git/3d/pcl-portable/keypoints/include;F:/liuss/code/git/3d/pcl-portable/segmentation/include;F:/liuss/code/git/3d/pcl-portable/sample_consensus/include;F:/liuss/code/git/3d/pcl-portable/outofcore/include;F:/liuss/code/git/3d/pcl-portable/stereo/include;F:/liuss/code/git/3d/pcl-portable/geometry/include;F:/liuss/code/git/3d/pcl-portable/visualization/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/include/vtk-5.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,9 +76,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd D:\file\code\remote\fork\pcl\build
+cd F:\liuss\code\git\3d\pcl-portable\build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+F:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -91,7 +91,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\CMakeFiles\48765d2a52f932e360a064f388a1d4b0\PACKAGE_force.rule">
+    <CustomBuild Include="..\..\CMakeFiles\b4d448c0ffa211ea11e68832e9e17c99\PACKAGE_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -102,8 +102,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/48765d2a52f932e360a064f388a1d4b0/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\examples\keypoints\CMakeFiles\PACKAGE_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/b4d448c0ffa211ea11e68832e9e17c99/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\liuss\code\git\3d\pcl-portable\build\examples\keypoints\CMakeFiles\PACKAGE_force</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 cd .
@@ -114,13 +114,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/48765d2a52f932e360a064f388a1d4b0/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\examples\keypoints\CMakeFiles\PACKAGE_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/b4d448c0ffa211ea11e68832e9e17c99/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\liuss\code\git\3d\pcl-portable\build\examples\keypoints\CMakeFiles\PACKAGE_force</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ALL_BUILD.vcxproj">
-      <Project>50B6231A-CAA2-4B8C-ABF3-906488B91E17</Project>
+    <ProjectReference Include="F:/liuss/code/git/3d/pcl-portable/build/ALL_BUILD.vcxproj">
+      <Project>514BA4C1-5C1D-4A6C-AAE2-1471D5ACFE42</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

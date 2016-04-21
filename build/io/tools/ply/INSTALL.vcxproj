@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{28B4F5B6-8233-41E8-9D10-331F828B4F18}</ProjectGUID>
+    <ProjectGUID>{C2B66ECF-CABC-40D4-B8FE-22A9F364FCF6}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;D:\file\code\remote\fork\pcl\io\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/octree/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/include/vtk-5.8;F:/liuss/code/git/3d/pcl-portable/io/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -62,7 +62,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\octree\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;D:\file\code\remote\fork\pcl\io\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/octree/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/include/vtk-5.8;F:/liuss/code/git/3d/pcl-portable/io/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -83,7 +83,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\CMakeFiles\e98db6d76227a24641995f8a5e998015\INSTALL_force.rule">
+    <CustomBuild Include="..\..\..\CMakeFiles\1e8d0a8aa7ea9a677a769a7759e4eb3a\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -94,8 +94,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/e98db6d76227a24641995f8a5e998015/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\io\tools\ply\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/1e8d0a8aa7ea9a677a769a7759e4eb3a/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\liuss\code\git\3d\pcl-portable\build\io\tools\ply\CMakeFiles\INSTALL_force</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 cd .
@@ -106,13 +106,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/e98db6d76227a24641995f8a5e998015/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\io\tools\ply\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/1e8d0a8aa7ea9a677a769a7759e4eb3a/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\liuss\code\git\3d\pcl-portable\build\io\tools\ply\CMakeFiles\INSTALL_force</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ALL_BUILD.vcxproj">
-      <Project>50B6231A-CAA2-4B8C-ABF3-906488B91E17</Project>
+    <ProjectReference Include="F:/liuss/code/git/3d/pcl-portable/build/ALL_BUILD.vcxproj">
+      <Project>514BA4C1-5C1D-4A6C-AAE2-1471D5ACFE42</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

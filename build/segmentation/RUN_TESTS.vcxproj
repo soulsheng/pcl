@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{92B68946-2C77-49BA-80E4-605904682B43}</ProjectGUID>
+    <ProjectGUID>{019A7397-6CA7-4A4D-B74F-D52926D6E859}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>RUN_TESTS</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\geometry\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\ml\include;D:\file\code\remote\fork\pcl\segmentation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/geometry/include;F:/liuss/code/git/3d/pcl-portable/search/include;F:/liuss/code/git/3d/pcl-portable/sample_consensus/include;F:/liuss/code/git/3d/pcl-portable/kdtree/include;F:/liuss/code/git/3d/pcl-portable/octree/include;F:/liuss/code/git/3d/pcl-portable/features/include;F:/liuss/code/git/3d/pcl-portable/filters/include;F:/liuss/code/git/3d/pcl-portable/ml/include;F:/liuss/code/git/3d/pcl-portable/segmentation/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -62,7 +62,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\geometry\include;D:\file\code\remote\fork\pcl\search\include;D:\file\code\remote\fork\pcl\sample_consensus\include;D:\file\code\remote\fork\pcl\kdtree\include;D:\file\code\remote\fork\pcl\octree\include;D:\file\code\remote\fork\pcl\features\include;D:\file\code\remote\fork\pcl\filters\include;D:\file\code\remote\fork\pcl\ml\include;D:\file\code\remote\fork\pcl\segmentation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/geometry/include;F:/liuss/code/git/3d/pcl-portable/search/include;F:/liuss/code/git/3d/pcl-portable/sample_consensus/include;F:/liuss/code/git/3d/pcl-portable/kdtree/include;F:/liuss/code/git/3d/pcl-portable/octree/include;F:/liuss/code/git/3d/pcl-portable/features/include;F:/liuss/code/git/3d/pcl-portable/filters/include;F:/liuss/code/git/3d/pcl-portable/ml/include;F:/liuss/code/git/3d/pcl-portable/segmentation/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -83,7 +83,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\CMakeFiles\b7c655d68bec8c8e134f9fde46c9cf8d\RUN_TESTS_force.rule">
+    <CustomBuild Include="..\CMakeFiles\1e46014b97b25e8e2fafe10732ac8777\RUN_TESTS_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -94,8 +94,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/b7c655d68bec8c8e134f9fde46c9cf8d/RUN_TESTS_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\segmentation\CMakeFiles\RUN_TESTS_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/1e46014b97b25e8e2fafe10732ac8777/RUN_TESTS_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\liuss\code\git\3d\pcl-portable\build\segmentation\CMakeFiles\RUN_TESTS_force</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 cd .
@@ -106,8 +106,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/build/CMakeFiles/b7c655d68bec8c8e134f9fde46c9cf8d/RUN_TESTS_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\segmentation\CMakeFiles\RUN_TESTS_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/liuss/code/git/3d/pcl-portable/build/CMakeFiles/1e46014b97b25e8e2fafe10732ac8777/RUN_TESTS_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\liuss\code\git\3d\pcl-portable\build\segmentation\CMakeFiles\RUN_TESTS_force</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

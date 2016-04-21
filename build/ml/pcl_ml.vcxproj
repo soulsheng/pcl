@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{3A196866-FC54-4921-BC97-21EA87A391BD}</ProjectGUID>
+    <ProjectGUID>{26961C1C-B766-4B72-A5CE-8764C78F4831}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>pcl_ml</ProjectName>
@@ -35,13 +35,13 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\liuss\code\git\3d\pcl-portable\build\bin\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_ml.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcl_ml_debug</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\bin\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\liuss\code\git\3d\pcl-portable\build\bin\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_ml.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcl_ml_release</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
@@ -51,8 +51,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -65,19 +64,21 @@
       <OpenMPSupport>true</OpenMPSupport>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ProcessorNumber>4</ProcessorNumber>
+      <ProcessorNumber>2</ProcessorNumber>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>F:/liuss/code/git/3d/pcl-portable/build/bin/pcl_ml_debug.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,13 +87,13 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib;..\lib\pcl_common_debug.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib;..\lib\pcl_common_debug.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-gd-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-gd-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>VCOMP100D.dll</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_ml_debug.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_ml_debug.pdb</ProgramDataBaseFile>
+      <ImportLibrary>F:/liuss/code/git/3d/pcl-portable/build/lib/pcl_ml_debug.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/liuss/code/git/3d/pcl-portable/build/bin/pcl_ml_debug.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -103,8 +104,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
@@ -115,21 +115,23 @@
       <OpenMPSupport>true</OpenMPSupport>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ProcessorNumber>4</ProcessorNumber>
+      <ProcessorNumber>2</ProcessorNumber>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <DebugInformationFormat></DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>F:/liuss/code/git/3d/pcl-portable/build/bin/pcl_ml_release.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;QT_DLL;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;BOOST_LIB_DIAGNOSTIC;EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;FLANN_STATIC;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;C:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;C:\Program Files (x86)\OpenNI\Include;D:\file\code\remote\fork\pcl\recognition\include\pcl\recognition\3rdparty;C:\Qt\4.8.0\include;C:\Qt\4.8.0\include\QtCore;D:\file\code\remote\fork\pcl\build\include;D:\file\code\remote\fork\pcl\common\include;D:\file\code\remote\fork\pcl\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Eigen/include;E:/Program Files (x86)/PCL 1.6.0/3rdParty/FLANN/include;F:/liuss/code/git/3d/pcl-portable/recognition/include/pcl/recognition/3rdparty;F:/liuss/code/git/3d/pcl-portable/build/include;F:/liuss/code/git/3d/pcl-portable/common/include;F:/liuss/code/git/3d/pcl-portable/ml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -138,15 +140,15 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib;..\lib\pcl_common_release.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;C:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib;..\lib\pcl_common_release.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_system-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_filesystem-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_thread-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_date_time-vc100-mt-1_49.lib;E:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\libboost_iostreams-vc100-mt-1_49.lib;delayimp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;E:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8;E:/Program Files (x86)/PCL 1.6.0/3rdParty/VTK/lib/vtk-5.8/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>VCOMP100.dll</DelayLoadDLLs>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/file/code/remote/fork/pcl/build/lib/pcl_ml_release.lib</ImportLibrary>
+      <ImportLibrary>F:/liuss/code/git/3d/pcl-portable/build/lib/pcl_ml_release.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>D:/file/code/remote/fork/pcl/build/bin/pcl_ml_release.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>F:/liuss/code/git/3d/pcl-portable/build/bin/pcl_ml_release.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -156,9 +158,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\ml\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/ml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule F:/liuss/code/git/3d/pcl-portable/ml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\ml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HF:/liuss/code/git/3d/pcl-portable -BF:/liuss/code/git/3d/pcl-portable/build --check-stamp-file F:\liuss\code\git\3d\pcl-portable\build\ml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -166,11 +168,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/remote/fork/pcl/ml/CMakeLists.txt;D:\file\code\remote\fork\pcl\ml\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\remote\fork\pcl\build\ml\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/remote/fork/pcl/ml/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/liuss/code/git/3d/pcl-portable/ml/CMakeLists.txt;F:\liuss\code\git\3d\pcl-portable\ml\CMakeLists.txt;F:\liuss\code\git\3d\pcl-portable\cmake\pkgconfig.cmake.in;F:\liuss\code\git\3d\pcl-portable\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\liuss\code\git\3d\pcl-portable\build\ml\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule F:/liuss/code/git/3d/pcl-portable/ml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/remote/fork/pcl -BD:/file/code/remote/fork/pcl/build --check-stamp-file D:\file\code\remote\fork\pcl\build\ml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HF:/liuss/code/git/3d/pcl-portable -BF:/liuss/code/git/3d/pcl-portable/build --check-stamp-file F:\liuss\code\git\3d\pcl-portable\build\ml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -178,8 +180,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/remote/fork/pcl/ml/CMakeLists.txt;D:\file\code\remote\fork\pcl\ml\CMakeLists.txt;D:\file\code\remote\fork\pcl\cmake\pkgconfig.cmake.in;D:\file\code\remote\fork\pcl\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\remote\fork\pcl\build\ml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/liuss/code/git/3d/pcl-portable/ml/CMakeLists.txt;F:\liuss\code\git\3d\pcl-portable\ml\CMakeLists.txt;F:\liuss\code\git\3d\pcl-portable\cmake\pkgconfig.cmake.in;F:\liuss\code\git\3d\pcl-portable\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\liuss\code\git\3d\pcl-portable\build\ml\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -226,11 +228,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\ml\src\kmeans.cpp"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/ZERO_CHECK.vcxproj">
-      <Project>AE594D77-2F23-43A4-8498-173B14EFADD7</Project>
+    <ProjectReference Include="F:/liuss/code/git/3d/pcl-portable/build/ZERO_CHECK.vcxproj">
+      <Project>21DB82E8-29CD-4F6B-A7CA-297185644B08</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/file/code/remote/fork/pcl/build/common/pcl_common.vcxproj">
-      <Project>50522124-8293-4D74-97D6-994C16EF25B3</Project>
+    <ProjectReference Include="F:/liuss/code/git/3d/pcl-portable/build/common/pcl_common.vcxproj">
+      <Project>361B45B9-F60F-4E18-912A-EDF9123A1A73</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
