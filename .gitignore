@@ -13,3 +13,6 @@ apps
 /build/ipch
 /build/tools/testOut.pcd
 /build/*.suo
+/build/tools/*.sdf
+/build/tools/*.opensdf
+/build/Win32

@@ -105,7 +105,7 @@ main (int argc, char** argv)
   }
 
   // Command line parsing
-  bool format = 1;
+  bool format = 0; // ascii 
   parse_argument (argc, argv, "-format", format);
   print_info ("PCD output format: "); print_value ("%s\n", (format ? "binary" : "ascii"));
 
