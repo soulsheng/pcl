@@ -34,7 +34,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
+#if 0
 #include <pcl/console/print.h>
 #include <pcl/io/boost.h>
 #include <pcl/io/hdl_grabber.h>
@@ -710,3 +710,4 @@ pcl::HDLGrabber::readPacketsFromPcap ()
 }
 #endif //#ifdef HAVE_PCAP
 
+#endif

@@ -16,3 +16,4 @@ apps
 /build/tools/*.sdf
 /build/tools/*.opensdf
 /build/Win32
+/test/output.pcd

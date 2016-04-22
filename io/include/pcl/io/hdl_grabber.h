@@ -34,7 +34,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
+#if 0
 #include "pcl/pcl_config.h"
 
 #ifndef PCL_IO_HDL_GRABBER_H_
@@ -266,3 +266,4 @@ namespace pcl
 }
 
 #endif /* PCL_IO_HDL_GRABBER_H_ */
+#endif

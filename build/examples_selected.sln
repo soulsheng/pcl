@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_io", "io\pcl_io.vcxproj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_io_ply", "io\pcl_io_ply.vcxproj", "{A253D5EA-5FD2-4C9C-B7BD-B67B0EB31FED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_marching_cubes_reconstruction", "tools\pcl_marching_cubes_reconstruction.vcxproj", "{90C06CC4-657F-4095-BD90-F9AC3DE6F288}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_viewer", "visualization\tools\pcl_viewer.vcxproj", "{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +35,14 @@ Global
 		{A253D5EA-5FD2-4C9C-B7BD-B67B0EB31FED}.Debug|Win32.Build.0 = Debug|Win32
 		{A253D5EA-5FD2-4C9C-B7BD-B67B0EB31FED}.Release|Win32.ActiveCfg = Release|Win32
 		{A253D5EA-5FD2-4C9C-B7BD-B67B0EB31FED}.Release|Win32.Build.0 = Release|Win32
+		{90C06CC4-657F-4095-BD90-F9AC3DE6F288}.Debug|Win32.ActiveCfg = Debug|Win32
+		{90C06CC4-657F-4095-BD90-F9AC3DE6F288}.Debug|Win32.Build.0 = Debug|Win32
+		{90C06CC4-657F-4095-BD90-F9AC3DE6F288}.Release|Win32.ActiveCfg = Release|Win32
+		{90C06CC4-657F-4095-BD90-F9AC3DE6F288}.Release|Win32.Build.0 = Release|Win32
+		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Debug|Win32.Build.0 = Debug|Win32
+		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Release|Win32.ActiveCfg = Release|Win32
+		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
