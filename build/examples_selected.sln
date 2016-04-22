@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_marching_cubes_reconstr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_viewer", "visualization\tools\pcl_viewer.vcxproj", "{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_gp3_surface", "tools\pcl_gp3_surface.vcxproj", "{2AE385B0-1C0D-4526-B82F-910F1BEB5CC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +45,10 @@ Global
 		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Debug|Win32.Build.0 = Debug|Win32
 		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Release|Win32.ActiveCfg = Release|Win32
 		{97994FC9-5E62-4EE8-9BE0-7324E6153D5F}.Release|Win32.Build.0 = Release|Win32
+		{2AE385B0-1C0D-4526-B82F-910F1BEB5CC9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2AE385B0-1C0D-4526-B82F-910F1BEB5CC9}.Debug|Win32.Build.0 = Debug|Win32
+		{2AE385B0-1C0D-4526-B82F-910F1BEB5CC9}.Release|Win32.ActiveCfg = Release|Win32
+		{2AE385B0-1C0D-4526-B82F-910F1BEB5CC9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
