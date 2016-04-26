@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_vtk2obj", "tools\pcl_vt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_outlier_removal", "tools\pcl_outlier_removal.vcxproj", "{FCCAE494-3A84-4AFF-AE2B-67C94442C13E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_mls_smoothing", "tools\pcl_mls_smoothing.vcxproj", "{0CEE8085-3028-4C22-A693-2BA874999773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -67,6 +69,10 @@ Global
 		{FCCAE494-3A84-4AFF-AE2B-67C94442C13E}.Debug|Win32.Build.0 = Debug|Win32
 		{FCCAE494-3A84-4AFF-AE2B-67C94442C13E}.Release|Win32.ActiveCfg = Release|Win32
 		{FCCAE494-3A84-4AFF-AE2B-67C94442C13E}.Release|Win32.Build.0 = Release|Win32
+		{0CEE8085-3028-4C22-A693-2BA874999773}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0CEE8085-3028-4C22-A693-2BA874999773}.Debug|Win32.Build.0 = Debug|Win32
+		{0CEE8085-3028-4C22-A693-2BA874999773}.Release|Win32.ActiveCfg = Release|Win32
+		{0CEE8085-3028-4C22-A693-2BA874999773}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
