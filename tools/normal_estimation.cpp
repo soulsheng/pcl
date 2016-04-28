@@ -45,6 +45,7 @@
 #include <pcl/console/print.h>
 #include <pcl/console/parse.h>
 #include <pcl/console/time.h>
+#include <pcl/visualization/pcl_visualizer.h>
 
 using namespace std;
 using namespace pcl;
@@ -81,7 +82,7 @@ loadCloud (const string &filename, pcl::PCLPointCloud2 &cloud,
 
 void
 compute (const pcl::PCLPointCloud2::ConstPtr &input, pcl::PCLPointCloud2 &output,
-         int k, double radius)
+         int k, double radius, PointCloud<Normal>::Ptr &normals)
 {
   // Convert data to PointCloud<T>
   PointCloud<PointXYZ>::Ptr xyz (new PointCloud<PointXYZ>);
@@ -90,8 +91,6 @@ compute (const pcl::PCLPointCloud2::ConstPtr &input, pcl::PCLPointCloud2 &output
   TicToc tt;
   tt.tic ();
  
-  PointCloud<Normal> normals;
-
   // Try our luck with organized integral image based normal estimation
   if (xyz->isOrganized ())
   {
@@ -100,7 +99,7 @@ compute (const pcl::PCLPointCloud2::ConstPtr &input, pcl::PCLPointCloud2 &output
     ne.setNormalEstimationMethod (IntegralImageNormalEstimation<PointXYZ, Normal>::COVARIANCE_MATRIX);
     ne.setNormalSmoothingSize (float (radius));
     ne.setDepthDependentSmoothing (true);
-    ne.compute (normals);
+    ne.compute (*normals);
   }
   else
   {
@@ -109,14 +108,14 @@ compute (const pcl::PCLPointCloud2::ConstPtr &input, pcl::PCLPointCloud2 &output
     ne.setSearchMethod (search::KdTree<PointXYZ>::Ptr (new search::KdTree<PointXYZ>));
     ne.setKSearch (k);
     ne.setRadiusSearch (radius);
-    ne.compute (normals);
+    ne.compute (*normals);
   }
 
-  print_highlight ("Computed normals in "); print_value ("%g", tt.toc ()); print_info (" ms for "); print_value ("%d", normals.width * normals.height); print_info (" points.\n");
+  print_highlight ("Computed normals in "); print_value ("%g", tt.toc ()); print_info (" ms for "); print_value ("%d", normals->width * normals->height); print_info (" points.\n");
 
   // Convert data back
   pcl::PCLPointCloud2 output_normals;
-  toPCLPointCloud2 (normals, output_normals);
+  toPCLPointCloud2 (*normals, output_normals);
   concatenateFields (*input, output_normals, output);
 }
 
@@ -145,7 +144,8 @@ batchProcess (const vector<string> &pcd_files, string &output_dir, int k, double
 
     // Perform the feature estimation
     pcl::PCLPointCloud2 output;
-    compute (cloud, output, k, radius);
+	PointCloud<Normal>::Ptr normals(new PointCloud<Normal>() );
+    compute (cloud, output, k, radius, normals);
 
     // Prepare output file name
     string filename = pcd_files[i];
@@ -217,10 +217,19 @@ main (int argc, char** argv)
 
     // Perform the feature estimation
     pcl::PCLPointCloud2 output;
-    compute (cloud, output, k, radius);
+	PointCloud<Normal>::Ptr normals(new PointCloud<Normal>() );
+    compute (cloud, output, k, radius, normals);
 
     // Save into the second file
     saveCloud (argv[p_file_indices[1]], output, translation, rotation);
+
+	PointCloud<PointXYZ>::Ptr outputPoint(new PointCloud<PointXYZ>() );
+	fromPCLPointCloud2(*cloud, *outputPoint);
+
+	visualization::PCLVisualizer viewer ("Normal Estimation Viewer");
+	viewer.addPointCloud<PointXYZ> (outputPoint, "Point Normal");
+	viewer.addPointCloudNormals<PointXYZ, Normal> (outputPoint, normals, 1, 0.05, "normals");
+	viewer.spin ();
   }
   else
   {
