@@ -43,6 +43,7 @@
 #include <pcl/console/parse.h>
 #include <pcl/console/time.h>
 #include <pcl/surface/gp3.h>
+#include <pcl/features/normal_3d.h>
 
 using namespace pcl;
 using namespace pcl::io;
@@ -63,13 +64,13 @@ printHelp (int, char **argv)
 }
 
 bool
-loadCloud (const std::string &filename, PointCloud<PointNormal> &cloud)
+loadCloud (const std::string &filename, PointCloud<PointXYZ> &cloud)
 {
   TicToc tt;
   print_highlight ("Loading "); print_value ("%s ", filename.c_str ());
 
   tt.tic ();
-  if (loadPCDFile<PointNormal> (filename, cloud) < 0)
+  if (loadPCDFile<PointXYZ> (filename, cloud) < 0)
     return (false);
   print_info ("[done, "); print_value ("%g", tt.toc ()); print_info (" ms : "); print_value ("%d", cloud.width * cloud.height); print_info (" points]\n");
   print_info ("Available dimensions: "); print_value ("%s\n", pcl::getFieldsList (cloud).c_str ());
@@ -119,6 +120,25 @@ saveCloud (const std::string &filename, const pcl::PolygonMesh &output)
   print_info ("[done, "); print_value ("%g", tt.toc ()); print_info (" ms : "); print_value ("%lu", output.polygons.size ()); print_info (" polygons]\n");
 }
 
+
+void normalEstimation( PointCloud<PointXYZ>::Ptr &cloud, PointCloud<pcl::PointNormal>::Ptr &cloud_with_normals )
+{
+	// Normal estimation*
+	NormalEstimation<PointXYZ, Normal> n;
+	PointCloud<Normal>::Ptr normals (new PointCloud<Normal>);
+	search::KdTree<PointXYZ>::Ptr tree (new search::KdTree<PointXYZ>);
+	tree->setInputCloud (cloud);
+	n.setInputCloud (cloud);
+	n.setSearchMethod (tree);
+	n.setKSearch (20);
+	n.compute (*normals);
+	//* normals should not contain the point normals + surface curvatures
+
+	// Concatenate the XYZ and normal fields*
+	concatenateFields (*cloud, *normals, *cloud_with_normals);
+	//* cloud_with_normals = cloud + normals
+}
+
 /* ---[ */
 int
 main (int argc, char** argv)
@@ -152,13 +172,16 @@ main (int argc, char** argv)
   parse_argument (argc, argv, "-radius", radius);
 
   // Load the first file
-  PointCloud<PointNormal>::Ptr cloud (new PointCloud<PointNormal>);
+  PointCloud<PointXYZ>::Ptr cloud (new PointCloud<PointXYZ>);
   if (!loadCloud (argv[pcd_file_indices[0]], *cloud)) 
     return (-1);
 
+  PointCloud<pcl::PointNormal>::Ptr cloud_with_normals (new PointCloud<PointNormal>);
+  normalEstimation(cloud, cloud_with_normals);
+
   // Perform the surface triangulation
   pcl::PolygonMesh output;
-  compute (cloud, output, mu, radius);
+  compute (cloud_with_normals, output, mu, radius);
 
   // Save into the second file
   saveCloud (argv[vtk_file_indices[0]], output);
