@@ -44,6 +44,7 @@
 #include <pcl/console/time.h>
 #include <pcl/surface/gp3.h>
 #include <pcl/features/normal_3d.h>
+#include <pcl/visualization/pcl_visualizer.h>
 
 using namespace pcl;
 using namespace pcl::io;
@@ -185,5 +186,9 @@ main (int argc, char** argv)
 
   // Save into the second file
   saveCloud (argv[vtk_file_indices[0]], output);
+
+  visualization::PCLVisualizer viewer ("Triangular Mesh");
+  viewer.addPolygonMesh(output,"Triangular Mesh");
+  viewer.spin ();
 }
 
