@@ -44,10 +44,21 @@
 #include <pcl/filters/radius_outlier_removal.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/filters/extract_indices.h>
+#include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/point_cloud_handlers.h>
 
 using namespace pcl;
 using namespace pcl::io;
 using namespace pcl::console;
+
+
+typedef pcl::visualization::PointCloudColorHandler<pcl::PCLPointCloud2> ColorHandler;
+typedef ColorHandler::Ptr ColorHandlerPtr;
+typedef ColorHandler::ConstPtr ColorHandlerConstPtr;
+
+typedef pcl::visualization::PointCloudGeometryHandler<pcl::PCLPointCloud2> GeometryHandler;
+typedef GeometryHandler::Ptr GeometryHandlerPtr;
+typedef GeometryHandler::ConstPtr GeometryHandlerConstPtr;
 
 std::string default_method = "radius";
 
@@ -242,9 +253,21 @@ main (int argc, char** argv)
   }
 
   // Do the smoothing
-  pcl::PCLPointCloud2 output;
-  compute (cloud, output, method, min_pts, radius, mean_k, std_dev_mul, negative, keep_organized);
+  pcl::PCLPointCloud2::Ptr output (new pcl::PCLPointCloud2);
+  compute (cloud, *output, method, min_pts, radius, mean_k, std_dev_mul, negative, keep_organized);
 
   // Save into the second file
-  saveCloud (argv[p_file_indices[1]], output, translation, rotation);
+  saveCloud (argv[p_file_indices[1]], *output, translation, rotation);
+
+  
+  visualization::PCLVisualizer viewer ("Outlier Removal Viewer");
+  ColorHandlerPtr color_handler;
+  GeometryHandlerPtr geometry_handler;
+  color_handler.reset (new pcl::visualization::PointCloudColorHandlerRGBField<pcl::PCLPointCloud2> ( output ) );
+  geometry_handler.reset (new pcl::visualization::PointCloudGeometryHandlerXYZ<pcl::PCLPointCloud2> ( output ) );
+  // Add the cloud to the renderer
+  
+  viewer.addPointCloud (output, geometry_handler, color_handler, translation, rotation, "cloud" );
+
+  viewer.spin ();
 }
