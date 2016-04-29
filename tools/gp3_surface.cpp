@@ -45,13 +45,23 @@
 #include <pcl/surface/gp3.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/point_cloud_handlers.h>
+
+
+typedef pcl::visualization::PointCloudColorHandler<pcl::PCLPointCloud2> ColorHandler;
+typedef ColorHandler::Ptr ColorHandlerPtr;
+typedef ColorHandler::ConstPtr ColorHandlerConstPtr;
+
+typedef pcl::visualization::PointCloudGeometryHandler<pcl::PCLPointCloud2> GeometryHandler;
+typedef GeometryHandler::Ptr GeometryHandlerPtr;
+typedef GeometryHandler::ConstPtr GeometryHandlerConstPtr;
 
 using namespace pcl;
 using namespace pcl::io;
 using namespace pcl::console;
 
-double default_mu = 0.0;
-double default_radius = 0.0;
+double default_mu = 100.0;
+double default_radius = 100.0;
 
 void
 printHelp (int, char **argv)
@@ -145,7 +155,7 @@ int
 main (int argc, char** argv)
 {
   print_info ("Perform surface triangulation using pcl::GreedyProjectionTriangulation. For more information, use: %s -h\n", argv[0]);
-
+#if 0
   if (argc < 3)
   {
     printHelp (argc, argv);
@@ -165,7 +175,7 @@ main (int argc, char** argv)
     print_error ("Need one output VTK file to continue.\n");
     return (-1);
   }
-
+#endif
   // Command line parsing
   double mu = default_mu;
   double radius = default_radius;
@@ -173,9 +183,14 @@ main (int argc, char** argv)
   parse_argument (argc, argv, "-radius", radius);
 
   // Load the first file
+  Eigen::Vector4f translation;
+  Eigen::Quaternionf rotation;
+  pcl::PCLPointCloud2::Ptr cloud_color (new pcl::PCLPointCloud2);
+  if (loadPCDFile ("2.0-f.pcd", *cloud_color, translation, rotation) < 0)
+	  return (-1);
+
   PointCloud<PointXYZ>::Ptr cloud (new PointCloud<PointXYZ>);
-  if (!loadCloud (argv[pcd_file_indices[0]], *cloud)) 
-    return (-1);
+  fromPCLPointCloud2(*cloud_color, *cloud);
 
   PointCloud<pcl::PointNormal>::Ptr cloud_with_normals (new PointCloud<PointNormal>);
   normalEstimation(cloud, cloud_with_normals);
@@ -185,10 +200,20 @@ main (int argc, char** argv)
   compute (cloud_with_normals, output, mu, radius);
 
   // Save into the second file
-  saveCloud (argv[vtk_file_indices[0]], output);
+  //saveCloud (argv[vtk_file_indices[0]], output);
 
   visualization::PCLVisualizer viewer ("Triangular Mesh");
   viewer.addPolygonMesh(output,"Triangular Mesh");
+
+  ColorHandlerPtr color_handler;
+  GeometryHandlerPtr geometry_handler;
+  color_handler.reset (new pcl::visualization::PointCloudColorHandlerRGBField<pcl::PCLPointCloud2> ( cloud_color ) );
+  geometry_handler.reset (new pcl::visualization::PointCloudGeometryHandlerXYZ<pcl::PCLPointCloud2> ( cloud_color ) );
+  // Add the cloud to the renderer
+  viewer.addPointCloud (cloud_color, geometry_handler, color_handler, translation, rotation, "cloud" );
+
   viewer.spin ();
+
+  system("pause");
 }
 
