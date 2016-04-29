@@ -211,7 +211,7 @@ main (int argc, char** argv)
   geometry_handler.reset (new pcl::visualization::PointCloudGeometryHandlerXYZ<pcl::PCLPointCloud2> ( cloud_color ) );
   // Add the cloud to the renderer
   viewer.addPointCloud (cloud_color, geometry_handler, color_handler, translation, rotation, "cloud" );
-
+  viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cloud");
   viewer.spin ();
 
   system("pause");
