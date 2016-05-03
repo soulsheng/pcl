@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_mls_smoothing", "tools\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_normal_estimation", "tools\pcl_normal_estimation.vcxproj", "{4B8FAE6B-138F-4A0D-8C5C-3103BF050FC1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcl_poisson_reconstruction", "tools\pcl_poisson_reconstruction.vcxproj", "{75CE27AF-AA5F-42F2-881E-C97D1848642B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -79,6 +81,10 @@ Global
 		{4B8FAE6B-138F-4A0D-8C5C-3103BF050FC1}.Debug|Win32.Build.0 = Debug|Win32
 		{4B8FAE6B-138F-4A0D-8C5C-3103BF050FC1}.Release|Win32.ActiveCfg = Release|Win32
 		{4B8FAE6B-138F-4A0D-8C5C-3103BF050FC1}.Release|Win32.Build.0 = Release|Win32
+		{75CE27AF-AA5F-42F2-881E-C97D1848642B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{75CE27AF-AA5F-42F2-881E-C97D1848642B}.Debug|Win32.Build.0 = Debug|Win32
+		{75CE27AF-AA5F-42F2-881E-C97D1848642B}.Release|Win32.ActiveCfg = Release|Win32
+		{75CE27AF-AA5F-42F2-881E-C97D1848642B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

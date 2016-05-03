@@ -45,6 +45,18 @@
 #include <pcl/console/parse.h>
 #include <pcl/console/time.h>
 #include <pcl/surface/poisson.h>
+#include <pcl/features/normal_3d.h>
+#include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/point_cloud_handlers.h>
+
+
+typedef pcl::visualization::PointCloudColorHandler<pcl::PCLPointCloud2> ColorHandler;
+typedef ColorHandler::Ptr ColorHandlerPtr;
+typedef ColorHandler::ConstPtr ColorHandlerConstPtr;
+
+typedef pcl::visualization::PointCloudGeometryHandler<pcl::PCLPointCloud2> GeometryHandler;
+typedef GeometryHandler::Ptr GeometryHandlerPtr;
+typedef GeometryHandler::ConstPtr GeometryHandlerConstPtr;
 
 using namespace pcl;
 using namespace pcl::io;
@@ -86,11 +98,11 @@ loadCloud (const std::string &filename, pcl::PCLPointCloud2 &cloud)
 }
 
 void
-compute (const pcl::PCLPointCloud2::ConstPtr &input, PolygonMesh &output,
+compute (const PointCloud<PointNormal>::Ptr &input, PolygonMesh &output,
          int depth, int solver_divide, int iso_divide, float point_weight)
 {
-  PointCloud<PointNormal>::Ptr xyz_cloud (new pcl::PointCloud<PointNormal> ());
-  fromPCLPointCloud2 (*input, *xyz_cloud);
+  //PointCloud<PointNormal>::Ptr xyz_cloud (new pcl::PointCloud<PointNormal> ());
+  //fromPCLPointCloud2 (*input, *xyz_cloud);
 
   print_info ("Using parameters: depth %d, solverDivide %d, isoDivide %d\n", depth, solver_divide, iso_divide);
 
@@ -99,7 +111,7 @@ compute (const pcl::PCLPointCloud2::ConstPtr &input, PolygonMesh &output,
 	poisson.setSolverDivide (solver_divide);
 	poisson.setIsoDivide (iso_divide);
   poisson.setPointWeight (point_weight);
-  poisson.setInputCloud (xyz_cloud);
+  poisson.setInputCloud (input);
 
   TicToc tt;
   tt.tic ();
@@ -119,6 +131,24 @@ saveCloud (const std::string &filename, const PolygonMesh &output)
   saveVTKFile (filename, output);
 
   print_info ("[done, "); print_value ("%g", tt.toc ()); print_info (" ms]\n");
+}
+
+void normalEstimation( PointCloud<PointXYZ>::Ptr &cloud, PointCloud<pcl::PointNormal>::Ptr &cloud_with_normals )
+{
+	// Normal estimation*
+	NormalEstimation<PointXYZ, Normal> n;
+	PointCloud<Normal>::Ptr normals (new PointCloud<Normal>);
+	search::KdTree<PointXYZ>::Ptr tree (new search::KdTree<PointXYZ>);
+	tree->setInputCloud (cloud);
+	n.setInputCloud (cloud);
+	n.setSearchMethod (tree);
+	n.setKSearch (20);
+	n.compute (*normals);
+	//* normals should not contain the point normals + surface curvatures
+
+	// Concatenate the XYZ and normal fields*
+	concatenateFields (*cloud, *normals, *cloud_with_normals);
+	//* cloud_with_normals = cloud + normals
 }
 
 /* ---[ */
@@ -167,15 +197,38 @@ main (int argc, char** argv)
   print_info ("Setting point_weight to: "); print_value ("%f\n", point_weight);
 
   // Load the first file
-  pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2);
-  if (!loadCloud (argv[pcd_file_indices[0]], *cloud))
-    return (-1);
+  Eigen::Vector4f translation;
+  Eigen::Quaternionf rotation;
+  pcl::PCLPointCloud2::Ptr cloud2 (new pcl::PCLPointCloud2);
+  if (loadPCDFile (argv[pcd_file_indices[0]], *cloud2, translation, rotation) < 0)
+	  return (-1);
+
+  PointCloud<PointXYZ>::Ptr cloud (new PointCloud<PointXYZ>);
+  fromPCLPointCloud2(*cloud2, *cloud);
+
+  PointCloud<pcl::PointNormal>::Ptr cloud_with_normals (new PointCloud<PointNormal>);
+  normalEstimation(cloud, cloud_with_normals);
 
   // Apply the Poisson surface reconstruction algorithm
   PolygonMesh output;
-  compute (cloud, output, depth, solver_divide, iso_divide, point_weight);
+  compute (cloud_with_normals, output, depth, solver_divide, iso_divide, point_weight);
 
   // Save into the second file
-  saveCloud (argv[vtk_file_indices[0]], output);
+  //saveCloud (argv[vtk_file_indices[0]], output);
+
+
+  visualization::PCLVisualizer viewer ("Triangular Mesh");
+  viewer.addPolygonMesh(output,"Triangular Mesh");
+
+  ColorHandlerPtr color_handler;
+  GeometryHandlerPtr geometry_handler;
+  color_handler.reset (new pcl::visualization::PointCloudColorHandlerRGBField<pcl::PCLPointCloud2> ( cloud2 ) );
+  geometry_handler.reset (new pcl::visualization::PointCloudGeometryHandlerXYZ<pcl::PCLPointCloud2> ( cloud2 ) );
+  // Add the cloud to the renderer
+  viewer.addPointCloud (cloud2, geometry_handler, color_handler, translation, rotation, "cloud" );
+  viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cloud");
+  viewer.spin ();
+
+  system("pause");
 }
 
