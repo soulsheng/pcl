@@ -90,7 +90,7 @@ loadCloud (const std::string &filename, PointCloud<PointXYZ> &cloud)
 }
 
 void
-compute (const PointCloud<PointNormal>::Ptr &input, pcl::PolygonMesh &output,
+compute (const PointCloud<PointXYZRGBNormal>::Ptr &input, pcl::PolygonMesh &output,
          double mu, double radius)
 {
   // Estimate
@@ -99,7 +99,7 @@ compute (const PointCloud<PointNormal>::Ptr &input, pcl::PolygonMesh &output,
   
   print_highlight (stderr, "Computing ");
 
-  PointCloud<PointNormal>::Ptr cloud (new PointCloud<PointNormal> ());
+  PointCloud<PointXYZRGBNormal>::Ptr cloud (new PointCloud<PointXYZRGBNormal> ());
   for (size_t i = 0; i < input->size (); ++i)
     if (pcl_isfinite (input->points[i].x))
       cloud->push_back (input->points[i]);
@@ -108,8 +108,8 @@ compute (const PointCloud<PointNormal>::Ptr &input, pcl::PolygonMesh &output,
   cloud->height = 1;
   cloud->is_dense = true;
 
-  GreedyProjectionTriangulation<PointNormal> gpt;
-  gpt.setSearchMethod (pcl::search::KdTree<pcl::PointNormal>::Ptr (new pcl::search::KdTree<pcl::PointNormal>));
+  GreedyProjectionTriangulation<PointXYZRGBNormal> gpt;
+  gpt.setSearchMethod (pcl::search::KdTree<pcl::PointXYZRGBNormal>::Ptr (new pcl::search::KdTree<pcl::PointXYZRGBNormal>));
   gpt.setInputCloud (cloud);
   gpt.setSearchRadius (radius);
   gpt.setMu (mu);
@@ -132,12 +132,12 @@ saveCloud (const std::string &filename, const pcl::PolygonMesh &output)
 }
 
 
-void normalEstimation( PointCloud<PointXYZ>::Ptr &cloud, PointCloud<pcl::PointNormal>::Ptr &cloud_with_normals )
+void normalEstimation( PointCloud<PointXYZRGB>::Ptr &cloud, PointCloud<pcl::PointXYZRGBNormal>::Ptr &cloud_with_normals )
 {
 	// Normal estimation*
-	NormalEstimation<PointXYZ, Normal> n;
+	NormalEstimation<PointXYZRGB, Normal> n;
 	PointCloud<Normal>::Ptr normals (new PointCloud<Normal>);
-	search::KdTree<PointXYZ>::Ptr tree (new search::KdTree<PointXYZ>);
+	search::KdTree<PointXYZRGB>::Ptr tree (new search::KdTree<PointXYZRGB>);
 	tree->setInputCloud (cloud);
 	n.setInputCloud (cloud);
 	n.setSearchMethod (tree);
@@ -189,10 +189,10 @@ main (int argc, char** argv)
   if (loadPCDFile ("2.0-f.pcd", *cloud_color, translation, rotation) < 0)
 	  return (-1);
 
-  PointCloud<PointXYZ>::Ptr cloud (new PointCloud<PointXYZ>);
+  PointCloud<PointXYZRGB>::Ptr cloud (new PointCloud<PointXYZRGB>);
   fromPCLPointCloud2(*cloud_color, *cloud);
 
-  PointCloud<pcl::PointNormal>::Ptr cloud_with_normals (new PointCloud<PointNormal>);
+  PointCloud<pcl::PointXYZRGBNormal>::Ptr cloud_with_normals (new PointCloud<PointXYZRGBNormal>);
   normalEstimation(cloud, cloud_with_normals);
 
   // Perform the surface triangulation
@@ -204,7 +204,7 @@ main (int argc, char** argv)
 
   visualization::PCLVisualizer viewer ("Triangular Mesh");
   viewer.addPolygonMesh(output,"Triangular Mesh");
-
+#if 0
   ColorHandlerPtr color_handler;
   GeometryHandlerPtr geometry_handler;
   color_handler.reset (new pcl::visualization::PointCloudColorHandlerRGBField<pcl::PCLPointCloud2> ( cloud_color ) );
@@ -212,6 +212,7 @@ main (int argc, char** argv)
   // Add the cloud to the renderer
   viewer.addPointCloud (cloud_color, geometry_handler, color_handler, translation, rotation, "cloud" );
   viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cloud");
+#endif
   viewer.spin ();
 
   system("pause");
